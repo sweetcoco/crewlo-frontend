@@ -5,8 +5,14 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    fingerprint: {
+        //exclude: ['fonts/169929'],
+        prepend: 'http://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-006093774612/production/'
+    }
   });
 
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

@@ -1,3 +1,24 @@
-<h2 id="title">Welcome to Ember</h2>
+<!--<h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<div class="menu">
+    {{#if session.isAuthenticated}}
+        <a {{action 'invalidateSession'}}>Logout</a>
+    {{else}}
+        {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
+    {{#link-to 'protected'}}Protected{{/link-to}}
+</div>
+-->
+
+
+{{#if session.isAuthenticated}}
+    {{main-nav}}
+    <div class="main container">
+        {{#link-to 'protected'}}Protected{{/link-to}}
+        {{outlet}}
+    </div>
+{{else}}
+    <div class="main-login">
+        {{main-login}}
+    </div>
+{{/if}}
