@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700);
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 body {
     height: 100%;
     line-height: 1;
@@ -138,6 +140,30 @@ body {
 .navbar-default .in .navbar-nav > li > a, .navbar-default .collapsing .navbar-nav > li > a {
     display: block;
     padding-top: 10px;
+}
+
+.new-post-modal {
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 20px auto;
+    overflow: auto;
+    list-style: none;
+}
+.new-post-div {
+    width: 320px;
+}
+.new-post-div img {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.ember-modal-dialog {
+    z-index: 502;
+}
+.ember-modal-overlay {
+    z-index: 502;
 }
 
 

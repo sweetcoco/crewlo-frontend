@@ -42,6 +42,9 @@ export default Ember.Component.extend(RespondsToScroll,RespondsToEscKeydown,{
     actions: {
         invalidateSession() {
             this.get('session').invalidate();
+        },
+        newPost() {
+            this.sendAction('showModalDialog', 'New Post');
         }
     }
 });

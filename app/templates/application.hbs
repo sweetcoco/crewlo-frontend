@@ -12,7 +12,7 @@
 
 
 {{#if session.isAuthenticated}}
-    {{main-nav}}
+    {{main-nav showModalDialog='showModalDialog'}}
     <div class="main container">
         {{#link-to 'protected'}}Protected{{/link-to}}
         {{outlet}}
@@ -21,4 +21,10 @@
     <div class="main-login">
         {{main-login}}
     </div>
+{{/if}}
+
+{{#if isShowingModal}}
+    {{#newpost-modal close='closeModalDialog'}}
+        {{new-post-modal}}
+    {{/newpost-modal}}
 {{/if}}
